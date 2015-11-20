@@ -76,6 +76,9 @@
                     speed = speed>0?Math.ceil(speed):Math.floor(speed);
                     _tmplist[i].domobj.style.backgroundPositionY = -(wz+speed) + "px";
                 }
+                if(getstyle(_tmplist[_tmplist.length-1].domobj,"background-position-y")==0){
+                    clearInterval(_this.timer);
+                }
             }
             this.timer=timer(_stop);
             return this;
